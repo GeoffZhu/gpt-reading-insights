@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a,a:link,a:visited,a:hover,a:active{
+  text-decoration: none;
+  color:inherit;
+}
+
+li {
+  list-style-type: none;
+}
