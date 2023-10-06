@@ -14,7 +14,10 @@
 
 目前还没有将此项目部署都任何服务器上，仅在本地使用
 
-### 配置 & 安装依赖
+### 安装依赖
+项目中`backend`，`frontend`，`spider`文件夹中的`npm`包需要分别执行`npm install`
+
+### 配置
 在项目根目录`config.json`中配置`OPENAI_API_KEY`
 
 ### 获取新闻
