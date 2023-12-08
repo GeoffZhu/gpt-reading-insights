@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "chalk": "^5.3.0",
-    "gz-spider": "file:/Volumes/Code/Project/spider",
+    "gz-spider": "0.0.2",
     "sqlite3": "^5.1.6"
   }
 }
