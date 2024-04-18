@@ -1,8 +1,9 @@
 const openai = require('./models/openai')
+const Config = require('../../config.json')
 
 const prompt = `你是一名政治经济记者，善于分析宏观经济。
-你的工作是分析央行公布的财政数据，给出 总结、数据波动背后的意义 以及 对未来的预测。
-你的读者是五年级学生，报道要通俗易懂。
+你的工作是分析央行公布的财政数据，给出 简短总结、数据波动背后意义 以及 对未来的预测。
+你的读者是高中生，简报要通俗易懂。
 
 输出格式如下
 总结：
@@ -12,7 +13,7 @@ const prompt = `你是一名政治经济记者，善于分析宏观经济。
 
 const financialAnalystRole = async (content) => {
   const resp = await openai.chat.completions.create({
-    model: 'gpt-3.5-turbo-16k',
+    model: Config.MODEL || 'gpt-3.5-turbo-16k',
     messages: [{
       role: 'system', content: prompt
     },{

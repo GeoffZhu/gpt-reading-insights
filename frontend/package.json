@@ -10,12 +10,12 @@
     "marked": "^9.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && mv build/** ../backend/public/",
+    "build": "react-scripts build && rm -rf ../backend/public && mkdir ../backend/public && mv build/** ../backend/public/",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
