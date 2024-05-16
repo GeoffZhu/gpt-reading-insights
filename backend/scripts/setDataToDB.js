@@ -43,7 +43,7 @@ module.exports = async (newsList) => {
     if (await checkIfExist(href)) continue
 
     if (!containsChinese(news.title)) {
-      news.title = await translator(news.title, '，结尾不要有句号')
+      news.title = await translator(news.title)
     }
     try {
       news.gptReport = await financialAnalystRole(content)

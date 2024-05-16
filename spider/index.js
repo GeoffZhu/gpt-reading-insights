@@ -7,8 +7,10 @@ spider.setFetcher({ headless: true })
 spider.setProcesser('publicBankChina', require('./publicBankChina'))
 spider.setProcesser('federalReserveBank', require('./federalReserveBank'))
 spider.setProcesser('treasuryUS', require('./treasuryUS'))
+spider.setProcesser('openAI', require('./openai'))
 
 ;(async () => {
+  log(new Date().toString())
   for (let name of spider.getAllProcessers()) {
     log(`${name}-任务开始`)
     const data = await spider.getData(name)

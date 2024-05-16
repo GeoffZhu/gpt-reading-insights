@@ -12,7 +12,7 @@ const RecentDataPage = () => {
 
   return (
     <Fragment>
-        <h1 className={styles.pageTitle}>最近7日财经新闻</h1>
+        <h1 className={styles.pageTitle}>Read</h1>
         <div className={styles.pageContainer}>
           <List onSelectItem={handleSelectItem} />
           <Detail selectedItem={selectedItem} />
