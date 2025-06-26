@@ -36,7 +36,7 @@ module.exports = async (fetcher) => {
     })
 
     const extraData = await fetcher.page.evaluate(() => {
-      const contentDOM = document.querySelector('#article')
+      const contentDOM = document.querySelector('#article') || document.querySelector('.cf-section__main')
       return {
         content: contentDOM.innerText,
         sourceHtml: contentDOM.innerHTML,

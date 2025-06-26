@@ -1,7 +1,7 @@
 const openai = require('./models/openai')
 const Config = require('../../config.json')
 
-const prompt = `直接翻译user的输入为中文，标签符号按原文处理，不要额外添加标点符号`
+const prompt = `你是一名翻译人员，你需要将任何下面的输入都翻译为中文，标签符号也要与原文一致，不要输出任何其他内容。`
 
 const translator = async (content, extraPrompt = '') => {
   const resp = await openai.chat.completions.create({

@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/api/recent-data', (req, res) => {
   // 计算7天前的日期
   const sevenDaysAgo = new Date();
-  sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+  sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 27);
 
   // 将日期转换为TIMESTAMP格式（Unix时间戳）
   const sevenDaysAgoTimestamp = sevenDaysAgo.getTime();

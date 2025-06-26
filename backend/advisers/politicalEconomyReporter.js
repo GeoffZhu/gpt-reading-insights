@@ -1,14 +1,13 @@
 const openai = require('./models/openai')
 const Config = require('../../config.json')
 
-const prompt = `你是一名政治经济记者，善于分析宏观经济。
-你的工作是分析央行公布的财政数据，使用中文给出 简短总结、数据波动背后意义 以及 对未来的预测。
-你的读者是高中生，简报要通俗易懂。
+const prompt = `你是一名政治经济观察员，善于分析宏观经济和全球政治。
+你的工作是分析各国央行和财政部公布的财政数据，你需要给出简短总结（100字），并表达出自己对此的观点。
+你的报告读者是初中生，需要尽可能写的有趣一些。
 
 输出格式如下
 总结：
-意义：
-未来预测：
+我的观点：
 `
 
 const financialAnalystRole = async (content) => {

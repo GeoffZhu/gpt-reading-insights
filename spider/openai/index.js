@@ -32,12 +32,13 @@ module.exports = async (fetcher) => {
       const contentDOM = document.querySelector(
         '#main'
       )
+      // 部分文章没有标注时间
       const timeDOM = contentDOM.querySelector(
         'p.text-caption.mb-4xs'
       )
       return {
         sourceType: `OpenAI`,
-        publishTime: new Date(timeDOM.innerText).getTime(),
+        publishTime: new Date(timeDOM?.innerText).getTime(),
         content: contentDOM.innerText,
         sourceHtml: contentDOM.innerHTML,
       }
